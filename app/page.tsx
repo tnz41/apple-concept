@@ -116,13 +116,12 @@ export default function Home() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="relative w-96 h-[500px]"
+          className="relative w-full h-[600px] rounded-3xl overflow-hidden"
         >
-          <Image
-            src="/Apple-iPhone-16e-48MP-Fusion-photography-250219-removebg-preview.png"
-            alt="iPhone 16e 48MP camera"
-            fill
-            className="object-contain drop-shadow-2xl"
+          <img
+            src="/Apple-iPhone-16e-48MP-Fusion-photography-250219.jpg"
+            alt="iPhone 16e camera"
+            className="w-full h-full object-cover rounded-3xl"
           />
         </motion.div>
       </section>
@@ -259,10 +258,10 @@ export default function Home() {
       {/* Product Grid */}
       <section className="max-w-6xl mx-auto px-4 py-24 grid grid-cols-1 md:grid-cols-2 gap-4">
         {[
-          { title: "MacBook Air M4", sub: "The thinnest, lightest Mac.", img: "/macbookairm4-removebg-preview.png" },
-          { title: "iPad Air M3", sub: "Powerful. Portable. Perfect.", img: null },
-          { title: "Apple Watch S10", sub: "Thinnest Apple Watch ever.", img: null },
-          { title: "AirPods 4", sub: "Remastered. Inside and out.", img: null },
+          { title: "MacBook Air M4", sub: "The thinnest, lightest Mac.", img: "/clean/Apple-MacBook-Air-hero-250305-removebg-preview.png" },
+          { title: "iPad Air M3", sub: "Powerful. Portable. Perfect.", img: "/clean/Apple-iPad-Air-hero-250304-removebg-preview.png" },
+          { title: "Apple Watch S10", sub: "Thinnest Apple Watch ever.", img: "/clean/Apple-Watch-Series-10-hero-240909-removebg-preview.png" },
+          { title: "AirPods 4", sub: "Remastered. Inside and out.", img: "/clean/Apple-AirPods-4-with-case-240909-removebg-preview.png" },
         ].map((product, i) => (
           <motion.div
             key={product.title}
@@ -275,12 +274,9 @@ export default function Home() {
             <p className="text-xs text-blue-500 font-semibold tracking-[0.2em] uppercase">New</p>
             <h2 className="text-4xl font-semibold mt-3 tracking-tight">{product.title}</h2>
             <p className="text-gray-400 mt-2 font-light">{product.sub}</p>
-            {product.img && (
-              <div className="relative w-full h-56 my-6">
-                <Image src={product.img} alt={product.title} fill className="object-contain drop-shadow-xl" />
-              </div>
-            )}
-            {!product.img && <div className="w-24 h-px bg-gray-200 my-6"></div>}
+            <div className="relative w-full h-56 my-6">
+              <Image src={product.img} alt={product.title} fill className="object-contain drop-shadow-xl" />
+            </div>
             <div className="flex gap-6">
               <button className="text-blue-500 text-sm hover:underline">Learn more</button>
               <button className="text-blue-500 text-sm hover:underline">Buy</button>
