@@ -3,6 +3,7 @@ import { Geist } from "next/font/google";
 import "./globals.css";
 import { CartProvider } from "./context/CartContext";
 import NavBar from "./components/NavBar";
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,31 +34,31 @@ export default function RootLayout({
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-xs text-gray-400">
                 <div className="flex flex-col gap-2">
                   <p className="text-black font-semibold mb-1">Shop and Learn</p>
-                  <a href="/store" className="hover:text-black transition">Store</a>
-                  <a href="/mac" className="hover:text-black transition">Mac</a>
-                  <a href="/iphone" className="hover:text-black transition">iPhone</a>
-                  <a href="/ipad" className="hover:text-black transition">iPad</a>
-                  <a href="/watch" className="hover:text-black transition">Watch</a>
+                  <Link href="/store" className="hover:text-black transition">Store</Link>
+                  <Link href="/mac" className="hover:text-black transition">Mac</Link>
+                  <Link href="/iphone" className="hover:text-black transition">iPhone</Link>
+                  <Link href="/ipad" className="hover:text-black transition">iPad</Link>
+                  <Link href="/watch" className="hover:text-black transition">Watch</Link>
                 </div>
                 <div className="flex flex-col gap-2">
                   <p className="text-black font-semibold mb-1">Services</p>
-                  <a href="#" className="hover:text-black transition">Apple Music</a>
-                  <a href="#" className="hover:text-black transition">Apple TV+</a>
-                  <a href="#" className="hover:text-black transition">iCloud</a>
-                  <a href="#" className="hover:text-black transition">Apple Pay</a>
+                  <Link href="#" className="hover:text-black transition">Apple Music</Link>
+                  <Link href="#" className="hover:text-black transition">Apple TV+</Link>
+                  <Link href="#" className="hover:text-black transition">iCloud</Link>
+                  <Link href="#" className="hover:text-black transition">Apple Pay</Link>
                 </div>
                 <div className="flex flex-col gap-2">
                   <p className="text-black font-semibold mb-1">Account</p>
-                  <a href="#" className="hover:text-black transition">Manage Your Apple ID</a>
-                  <a href="#" className="hover:text-black transition">Apple Store Account</a>
-                  <a href="#" className="hover:text-black transition">iCloud.com</a>
+                  <Link href="#" className="hover:text-black transition">Manage Your Apple ID</Link>
+                  <Link href="#" className="hover:text-black transition">Apple Store Account</Link>
+                  <Link href="#" className="hover:text-black transition">iCloud.com</Link>
                 </div>
                 <div className="flex flex-col gap-2">
                   <p className="text-black font-semibold mb-1">About Apple</p>
-                  <a href="#" className="hover:text-black transition">Newsroom</a>
-                  <a href="#" className="hover:text-black transition">Apple Leadership</a>
-                  <a href="#" className="hover:text-black transition">Careers</a>
-                  <a href="#" className="hover:text-black transition">Contact Apple</a>
+                  <Link href="#" className="hover:text-black transition">Newsroom</Link>
+                  <Link href="#" className="hover:text-black transition">Apple Leadership</Link>
+                  <Link href="#" className="hover:text-black transition">Careers</Link>
+                  <Link href="#" className="hover:text-black transition">Contact Apple</Link>
                 </div>
               </div>
             </div>
