@@ -26,7 +26,7 @@ export default function RootLayout({
             <div className="flex gap-8 text-gray-300 text-sm">
               <a href="#" className="hover:text-white transition">Store</a>
               <a href="#" className="hover:text-white transition">Mac</a>
-              <a href="#" className="hover:text-white transition">iPhone</a>
+              <a href="iphone" className="hover:text-white transition">iPhone</a>
               <a href="#" className="hover:text-white transition">iPad</a>
               <a href="#" className="hover:text-white transition">Watch</a>
             </div>
